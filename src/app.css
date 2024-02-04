@@ -1,0 +1,11 @@
+@import '@fontsource/inter';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-stone-50 dark:bg-stone-950 text-stone-950 dark:text-stone-50 font-['Inter'];
+	}
+}
