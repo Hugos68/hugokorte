@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Dot } from 'lucide-svelte';
-
 	export let data;
 </script>
 
@@ -11,13 +9,12 @@
 <article class="prose prose-stone dark:prose-invert mx-auto flex flex-col gap-8">
 	<header>
 		<h1>{data.metadata.title}</h1>
-		<div class="flex items-center">
-			<p class="text-sm text-gray-500">
+		<div class="flex items-center gap-2">
+			<p class="text-sm text-stone-500">
 				{data.metadata.date}
 			</p>
-
-			<Dot class="text-gray-500" />
-			<p class="text-sm text-gray-500">
+			<span class="rounded-full bg-stone-500 size-1" />
+			<p class="text-sm text-stone-500">
 				{data.readingTime}
 				{data.readingTime === 1 ? 'Minute' : 'Minutes'}
 			</p>

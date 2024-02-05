@@ -46,9 +46,6 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: ^2.35.1
     version: 2.35.1(eslint@8.56.0)(svelte@4.2.9)
-  lucide-svelte:
-    specifier: ^0.321.0
-    version: 0.321.0(svelte@4.2.9)
   mdsvex:
     specifier: ^0.11.0
     version: 0.11.0(svelte@4.2.9)
@@ -70,6 +67,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.0
     version: 3.6.3(postcss@8.4.33)(svelte@4.2.9)
+  svelte-feather-icons:
+    specifier: ^4.1.0
+    version: 4.1.0
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -1656,14 +1656,6 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte@0.321.0(svelte@4.2.9):
-    resolution: {integrity: sha512-sp5ogKKo8Oth6mcsIwN1HGudeshzSjtTGVwtISD/GdEjBaG4z3fwF6JupnnLEVPXC+TCETwcn6y3Y/Z3ljbs/Q==}
-    peerDependencies:
-      svelte: ^3 || ^4 || ^5.0.0-next.42
-    dependencies:
-      svelte: 4.2.9
-    dev: true
-
   /magic-string@0.30.6:
     resolution: {integrity: sha512-n62qCLbPjNjyo+owKtveQxZFZTBm+Ms6YoGD23Wew6Vw337PElFNifQpknPruVRQV57kVShPnLGo9vWxVhpPvA==}
     engines: {node: '>=12'}
@@ -2313,6 +2305,12 @@ packages:
       svelte: 4.2.9
     dev: true
 
+  /svelte-feather-icons@4.1.0:
+    resolution: {integrity: sha512-fcTL4VzEN4BoccQJjKiui0b9DWEsmO6zGpI0tQTJbthRtNrYheoU487zyA1BD8rj9kj6jbKGmGVo7zbSdRvMvA==}
+    dependencies:
+      svelte: 3.59.2
+    dev: true
+
   /svelte-hmr@0.15.3(svelte@4.2.9):
     resolution: {integrity: sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -2368,6 +2366,11 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.2.9
       typescript: 5.3.3
+    dev: true
+
+  /svelte@3.59.2:
+    resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
+    engines: {node: '>= 8'}
     dev: true
 
   /svelte@4.2.9:
