@@ -7,7 +7,7 @@ layout: article
 ---
 
 In this article I will talk about my experience with integrating [Pagefind](https://pagefind.app/) into a Vite based project. I will talk about why I needed Pagefind, why it was difficult to implement with Vite and how I ended up solving it.
-(Spoiler alert: I built a plugin)
+(Spoiler alert: I wrote a plugin)
 
 ## What is Pagefind?
 
@@ -35,8 +35,6 @@ Enter [Vite](https://vitejs.dev/).
 Vite is in general an awesome and widely loved (including me) tool to develop and bundle your apps with, it's extremely peformant and optimized compared to it's competitors.
 
 It's also great at deciding what code should be bundled, what code will not work and **what code is not present at build time**, here is where the problems start to arise (yes there are multiple).
-
-Here
 
 ### Problem 1: Dynamically importing Pagefind
 
