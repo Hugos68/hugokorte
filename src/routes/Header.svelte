@@ -7,7 +7,7 @@
 	class="max-w-screen-xl mx-auto px-4 py-8 flex items-center justify-between border-b-stone-500 border-b"
 >
 	<nav class="flex items-center gap-8">
-		<a href="/" class="text-xl font-extrabold">Hugo Korte</a>
+		<a href="/" class="text-xl font-extrabold">HK</a>
 		<a href="/about">About</a>
 		<a href="/articles">Articles</a>
 		<a href="/projects">Projects</a>
