@@ -3,6 +3,7 @@ title: Pagefind with Vite
 description: An article about setting up Pagefind with Vite.
 date: 2024-2-5
 published: true
+layout: article
 ---
 
 In this article I will talk about my experience with integrating [Pagefind](https://pagefind.app/) into a Vite based project. I will talk about why I needed Pagefind, why it was difficult to implement with Vite and how I ended up solving it.
