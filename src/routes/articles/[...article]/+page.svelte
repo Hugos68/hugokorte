@@ -7,8 +7,9 @@
 </svelte:head>
 
 <article class="prose prose-stone dark:prose-invert mx-auto flex flex-col gap-8">
-	<header>
+	<header class="border-b border-b-stone-500">
 		<h1>{data.metadata.title}</h1>
+		<p>{data.metadata.description}</p>
 		<div class="flex items-center gap-2">
 			<p class="text-sm text-stone-500">
 				{data.metadata.date}
