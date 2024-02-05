@@ -1,6 +1,6 @@
 ---
 title: Pagefind with Vite
-description: And the struggle to make them work.
+description: And the struggle to make them work together.
 date: 2024-2-5
 published: true
 layout: article
