@@ -15,9 +15,3 @@ Pagefind is a library used to add search to a website, quote from the creators o
 > Pagefind is a fully static search library that aims to perform well on large sites, while using as little of your users’ bandwidth as possible, and without hosting any infrastructure.
 
 Like it states above, Pagefind is a "static" search library, this means it can analyse static content and create a searchable index from that content. This content can be any form of text: HTML, JSON, plaintext, etc.
-
-```js
-function test() {
-	console.log('This codeblock is working!');
-}
-```
