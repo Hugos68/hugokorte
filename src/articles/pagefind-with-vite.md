@@ -141,6 +141,6 @@ Vite plugins are an awesome way to automate and extend Vite, in a nutshell they 
 
 You can learn more about it and how to use it at: https://github.com/Hugos68/vite-plugin-pagefind
 
-If you end up using it and have any questions about it be sure to let me know!
+If you end up using it and/or have any questions about it be sure to let me know!
 
 That'll be all from me, hope you enjoyed this read, and most importantly, learned something from it.
