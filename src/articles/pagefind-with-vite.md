@@ -127,9 +127,9 @@ Once this is set we solved the third problem and can finally start developing wi
 
 ## Vite plugin
 
-You might have realized during the process of solving the problem that there were a lot of steps neccesary to run get Pagefind properly working, this can become tedious to do and is especially time consuming.
+You might have realized during the process of solving the problem that there were quite a few steps neccesary to get Pagefind to function properly, this can become tedious to do and is especially time consuming.
 
-This is where Vite plugins comes in.
+This is where the Vite plugin comes in.
 
 Vite plugins are an awesome way to automate and extend Vite, in a nutshell they are pieces of code that can listen to [different lifecycle hooks](https://vitejs.dev/guide/api-plugin.html#universal-hooks) and execute code. Combining the knowledge about Pagefind and Vite we've obtained above I created a plugin that handles this all for you: `vite-plugin-pagefind`.
 
