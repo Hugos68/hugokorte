@@ -13,7 +13,7 @@ const config = {
 					lang,
 					theme: 'github-dark'
 				})
-			);	
+			);
 			return `{@html \`${html}\`}`;
 		}
 	},
