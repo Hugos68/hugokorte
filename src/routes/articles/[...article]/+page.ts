@@ -1,3 +1,4 @@
+import type { Article } from '$articles/article';
 import { error } from '@sveltejs/kit';
 
 export async function load({ params: { article } }) {
@@ -6,7 +7,7 @@ export async function load({ params: { article } }) {
 
 		return {
 			content,
-			metadata
+			metadata: { ...metadata, slug: article } as Article
 		};
 	} catch (e) {
 		error(404, `Article not found: ${article}`);

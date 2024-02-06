@@ -1,6 +1,6 @@
 export type Article = {
 	title: string;
-	descriptin: string;
+	description: string;
 	date: string;
 	readingTime: number;
 	published: boolean;
