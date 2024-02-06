@@ -11,7 +11,10 @@ const config = {
 			const html = escapeSvelte(
 				await codeToHtml(code, {
 					lang,
-					theme: 'github-dark'
+					themes: {
+						light: 'github-light',
+						dark: 'github-dark'
+					}
 				})
 			);
 			return `{@html \`${html}\`}`;
