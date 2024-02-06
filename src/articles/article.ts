@@ -42,10 +42,7 @@ function isValidPage(file: unknown): file is { metadata: Omit<Article, 'slug'> }
 
 export function getReadingTime(text: string) {
 	const WORDS_PER_MINUTE = 200;
-
 	const wordCount = text.match(/\w+/g)?.length ?? 1;
-
 	const readingTime = Math.ceil(wordCount / WORDS_PER_MINUTE);
-
 	return readingTime;
 }
