@@ -3,7 +3,6 @@ import { codeToHtml } from 'shiki';
 import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -30,7 +29,7 @@ const config = {
 			return `{@html \`${html}\`}`;
 		}
 	},
-	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+	rehypePlugins: [rehypeSlug],
 	remarkPlugins: [remarkReadingTime]
 };
 
