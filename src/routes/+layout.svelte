@@ -2,6 +2,19 @@
 	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import Header from './Header.svelte';
+	import { onNavigate } from '$app/navigation';
+
+	onNavigate((navigation) => {
+		// @ts-expect-error - `document.startViewTransition` is not in the DOM types
+		if (!document.startViewTransition) return;
+		return new Promise((resolve) => {
+			// @ts-expect-error - `document.startViewTransition` is not in the DOM types
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <ModeWatcher />

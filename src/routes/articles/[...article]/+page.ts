@@ -1,4 +1,4 @@
-import { getReadingTime } from '$articles/article.js';
+import { getReadingTime } from '$articles/article';
 import { error } from '@sveltejs/kit';
 
 export async function load({ params: { article } }) {
@@ -8,8 +8,7 @@ export async function load({ params: { article } }) {
 
 		return {
 			content,
-			metadata,
-			readingTime: getReadingTime(rawContent)
+			metadata: { ...metadata, readingTime: getReadingTime(rawContent) }
 		};
 	} catch (e) {
 		error(404, `Article not found: ${article}`);

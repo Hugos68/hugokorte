@@ -9,13 +9,15 @@
 		font-family: Inter, sans-serif;
 		scrollbar-gutter: stable both-edges;
 	}
+	html.dark .shiki,
+	html.dark .shiki span {
+		@apply !text-[--shiki-dark] !bg-[--shiki-dark-bg];
+	}
 	body {
 		@apply bg-stone-50 dark:bg-stone-950 text-stone-950 dark:text-stone-50;
 	}
+}
 
-	html.dark .shiki,
-	html.dark .shiki span {
-		color: var(--shiki-dark) !important;
-		background-color: var(--shiki-dark-bg) !important;
-	}
+:root {
+	view-transition-name: none;
 }

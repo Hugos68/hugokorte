@@ -2,6 +2,7 @@ export type Article = {
 	title: string;
 	descriptin: string;
 	date: string;
+	readingTime: number;
 	published: boolean;
 	slug: string;
 };
@@ -14,21 +15,25 @@ export async function getArticles() {
 	});
 
 	for (const [path, file] of Object.entries(paths)) {
-		if (!isValidPage(file)) {
+		if (!isValidArticle(file)) {
 			continue;
 		}
 
 		const slug = path.replace(/^\/?src\/articles\/|\.md$/g, '');
 		const metadata = file.metadata as Omit<Article, 'slug'>;
 
-		metadata.published && articles.push({ ...metadata, slug });
+		const { default: rawContent } = await import(`../articles/${slug}.md?raw`);
+
+		const readingTime = getReadingTime(rawContent);
+
+		metadata.published && articles.push({ ...metadata, readingTime, slug });
 	}
 
 	// Sort articles by date to show the latest first
 	return articles.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 }
 
-function isValidPage(file: unknown): file is { metadata: Omit<Article, 'slug'> } {
+function isValidArticle(file: unknown): file is { metadata: Omit<Article, 'slug'> } {
 	return (
 		typeof file === 'object' &&
 		file !== null &&
