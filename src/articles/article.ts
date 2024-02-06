@@ -22,11 +22,7 @@ export async function getArticles() {
 		const slug = path.replace(/^\/?src\/articles\/|\.md$/g, '');
 		const metadata = file.metadata as Omit<Article, 'slug'>;
 
-		const { default: rawContent } = await import(`../articles/${slug}.md?raw`);
-
-		const readingTime = getReadingTime(rawContent);
-
-		metadata.published && articles.push({ ...metadata, readingTime, slug });
+		metadata.published && articles.push({ ...metadata, slug });
 	}
 
 	// Sort articles by date to show the latest first
@@ -43,11 +39,4 @@ function isValidArticle(file: unknown): file is { metadata: Omit<Article, 'slug'
 		'title' in file.metadata &&
 		typeof file.metadata.title === 'string'
 	);
-}
-
-export function getReadingTime(text: string) {
-	const WORDS_PER_MINUTE = 200;
-	const wordCount = text.match(/\w+/g)?.length ?? 1;
-	const readingTime = Math.ceil(wordCount / WORDS_PER_MINUTE);
-	return readingTime;
 }

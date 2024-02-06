@@ -1,7 +1,17 @@
 import { escapeSvelte } from 'mdsvex';
 import { codeToHtml } from 'shiki';
+import getReadingTime from 'reading-time';
+import { toString } from 'mdast-util-to-string';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+
+function remarkReadingTime() {
+	return function (tree, { data }) {
+		const textOnPage = toString(tree);
+		const readingTime = getReadingTime(textOnPage);
+		data.fm.readingTime = readingTime.time;
+	};
+}
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const config = {
@@ -20,7 +30,8 @@ const config = {
 			return `{@html \`${html}\`}`;
 		}
 	},
-	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+	remarkPlugins: [remarkReadingTime]
 };
 
 export default config;

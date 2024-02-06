@@ -24,7 +24,7 @@
 						style="view-transition-name: article-dot;"
 					/>
 					<p style="view-transition-name: article-reading-time;">
-						{article.readingTime}
+						{Math.round(article.readingTime / 1000 / 60)}
 						{article.readingTime === 1 ? 'Minute' : 'Minutes'}
 					</p>
 				</div>
