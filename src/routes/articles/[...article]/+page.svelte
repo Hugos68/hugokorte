@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { ChevronLeftIcon } from 'svelte-feather-icons';
+	import { ChevronLeftIcon, ChevronUpIcon } from 'svelte-feather-icons';
+	import { fade } from 'svelte/transition';
 
 	export let data;
 
+	let scrollY: number;
+
 	$: ({ metadata: article, content } = data);
 </script>
+
+<svelte:window bind:scrollY />
 
 <svelte:head>
 	<title>{article.title}</title>
@@ -38,6 +43,17 @@
 		<svelte:component this={content} />
 	</section>
 </article>
+
+{#if scrollY > 250}
+	<a
+		in:fade
+		class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-stone-200 dark:bg-stone-800 rounded-md flex items-center gap-2 p-2"
+		href="#top"
+	>
+		Back to top
+		<ChevronUpIcon class="inline" />
+	</a>
+{/if}
 
 <style>
 	/* TODO: Convert this to a tailwind class */

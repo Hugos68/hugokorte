@@ -4,6 +4,7 @@ import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import remarkToc from 'remark-toc';
 
 function remarkReadingTime() {
 	return function (tree, { data }) {
@@ -39,7 +40,7 @@ const config = {
 			}
 		]
 	],
-	remarkPlugins: [remarkReadingTime]
+	remarkPlugins: [remarkReadingTime, remarkToc]
 };
 
 export default config;

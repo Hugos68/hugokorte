@@ -1,9 +1,11 @@
 ---
 title: Pagefind with Vite
 description: And the struggle to make them work together.
-date: 2024-2-5
+date: 2024-02-05
 published: true
 ---
+
+## Table of Contents
 
 In this article I will talk about my experience with integrating [Pagefind](https://pagefind.app/) into a Vite based project. I will talk about why I needed Pagefind, why it was difficult to implement with Vite and how I ended up solving it.
 (Spoiler alert: I wrote a plugin)
