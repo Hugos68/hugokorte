@@ -10,7 +10,9 @@
 	<title>{article.title}</title>
 </svelte:head>
 
-<article class="prose prose-stone dark:prose-invert mx-auto flex flex-col gap-8">
+<article
+	class="prose prose-stone prose-headings:scroll-mt-4 dark:prose-invert mx-auto flex flex-col gap-8"
+>
 	<div class="flex items-center gap-2">
 		<ChevronLeftIcon /> <a href="/articles">Back to articles</a>
 	</div>
@@ -36,3 +38,10 @@
 		<svelte:component this={content} />
 	</section>
 </article>
+
+<style>
+	/* TODO: Convert this to a tailwind class */
+	:global(h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a) {
+		text-decoration-line: none !important;
+	}
+</style>

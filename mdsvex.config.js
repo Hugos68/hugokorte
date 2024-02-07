@@ -30,7 +30,15 @@ const config = {
 			return `{@html \`${html}\`}`;
 		}
 	},
-	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+	rehypePlugins: [
+		rehypeSlug,
+		[
+			rehypeAutolinkHeadings,
+			{
+				behavior: 'wrap'
+			}
+		]
+	],
 	remarkPlugins: [remarkReadingTime]
 };
 
