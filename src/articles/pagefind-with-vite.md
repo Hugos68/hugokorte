@@ -7,7 +7,7 @@ published: true
 
 ## Table of Contents
 
-In this article I will talk about my experience with integrating [Pagefind](https://pagefind.app/) into a Vite based project. I will talk about why I needed Pagefind, why it was difficult to implement with Vite and how I ended up solving it.
+In this article I will talk about my experience with integrating [Pagefind](https://pagefind.app/) into a [Vite](https://vitejs.dev/) based project. I will talk about why I needed Pagefind, why it was difficult to implement with Vite and how I ended up solving it.
 (Spoiler alert: I wrote a plugin)
 
 ## What is Pagefind?
@@ -31,7 +31,7 @@ Here are some examples of large scale websites that have been indexed by Pagefin
 
 Up until now everything sounds pretty much ideal, you have a client side search solution that doesn't hog up your bandwidth and is performant on large scale, what's there to complain about?
 
-Enter [Vite](https://vitejs.dev/).
+Enter Vite.
 
 Vite is in general an awesome and widely loved (including me) tool to develop and bundle your apps with, it's extremely peformant and optimized compared to it's competitors.
 
