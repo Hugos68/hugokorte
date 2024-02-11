@@ -4,6 +4,10 @@
 	import Header from './Header.svelte';
 </script>
 
+<svelte:head>
+	<title>Hugo Korte</title>
+</svelte:head>
+
 <ModeWatcher />
 
 <Header />
